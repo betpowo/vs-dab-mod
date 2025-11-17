@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "name": "Steph",
+  "assetPath": "characters/steph",
+  "singTime": 8.0,
+  "scale": 1.5,
+  "offsets": [0, -5],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "steph IDLE",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "steph LEFT",
+      "offsets": [100, -40]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "steph DOWN",
+      "offsets": [-25, -45]
+    },
+    {
+      "name": "scarey",
+      "prefix": "steph BOO",
+      "offsets": [0, 20]
+    },
+    {
+      "name": "singUP",
+      "prefix": "steph UP",
+      "offsets": [-20, 10]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "steph RIGHT",
+      "offsets": [0, -40]
+    }
+  ]
+}
