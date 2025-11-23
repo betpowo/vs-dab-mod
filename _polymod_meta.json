@@ -1,6 +1,6 @@
 {
-   "title": "Vs Dab (2025)",
-   "description": "OKAY 5TH ATTEMPT LETS GOOOOOOOO",
+   "title": "VS. Dab [2025]",
+   "description": "Complete remake of the VS. Dab mod!",
 	"contributors": [
 		{
 			"name": "CherryChi",
@@ -17,10 +17,6 @@
 		{
 			"name": "Twizinho, Zyflx",
 			"role": "Charter, Playtester"
-		},
-		{
-			"name": "CCobaltDev",
-			"role": "Programmer Help"
 		}
     ],
    "api_version": "0.7.5",

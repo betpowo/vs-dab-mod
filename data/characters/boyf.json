@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "name": "Boyf",
-    "assetPath": "characters/15pesos/boyfrind",
+    "assetPath": "characters/extras/15pesos/boyfrind",
     "singTime": 6.1,
     "renderType": "sparrow",
     "isPixel": false,

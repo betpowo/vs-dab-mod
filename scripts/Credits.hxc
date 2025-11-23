@@ -7,27 +7,13 @@ class VsDabCredits extends Module {
 		super("VsDabCredits");
 	}
 
-	public function onCreate(event:ScriptEvent) // The categories have to be reversed due to the unshift sending it to the top
+	public function onCreate(event:ScriptEvent)
 	{
 		super.onCreate(event);
 
-	CreditsDataHandler.CREDITS_DATA.entries.unshift({
-		header: "Special Thanks",
-		body: [
-			{
-				line: "TheConcealedCow",
-			},
-			{
-				line: "Betopia",
-			},
-			{
-				line: "Ellie",
-			}
-		]
-	});
-	CreditsDataHandler.CREDITS_DATA.entries.unshift( // for example this one is on the bottom
+	CreditsDataHandler.CREDITS_DATA.entries.unshift(
 		{
-			header: "Extras",
+			header: "Special Thanks",
 			body: [
 				{
 					line: "CCobaltDev",
@@ -58,6 +44,9 @@ class VsDabCredits extends Module {
 				},
 				{
 					line: "YaWillorYaWont",
+				},
+				{
+					line: "ZackVairz",
 				}
 			]
 		});
@@ -66,28 +55,7 @@ class VsDabCredits extends Module {
 			body: [
 				{
 					line: "Kasane Teto",
-				},
-				{
-					line: "That one alien girl from my dreams idk",
-            },
-            {
-		   		line: "Goldship",
-				},
-				{
-					line: "the beef and the chicken jump",
-				},
-				{
-					line: "Kris and Susie",
-				},
-				{
-					line: "Freddy 'FNAF' Fazbear",
-				},
-				{
-					line: "Sonic the Hedgehog",
-				},
-            {
-               line: "Zoosmell Pooplord",
-            }
+				}
 			]
 		});
 		CreditsDataHandler.CREDITS_DATA.entries.unshift({
@@ -98,9 +66,6 @@ class VsDabCredits extends Module {
 				},
 				{
 					line: "Zyflx (Pico Mix)",
-				},
-				{
-					line: "Bluetoot (V1)",
 				}
 			]
 		});
@@ -112,17 +77,6 @@ class VsDabCredits extends Module {
 				},
 				{
 					line: "Betopia",
-				},
-            {
-               line: "CCobaltDev",
-             }
-			]
-		});
-		CreditsDataHandler.CREDITS_DATA.entries.unshift({
-			header: "Voice Acting",
-			body: [
-				{
-					line: "CherryChi (Voice of Dab)",
 				}
 			]
 		});
@@ -134,9 +88,6 @@ class VsDabCredits extends Module {
 				},
 				{
 					line: "CherryChi",
-				},
-				{
-					line: "kuru (i feel bad idk)",
 				}
 			]
 		});
@@ -164,7 +115,7 @@ class VsDabCredits extends Module {
 		});
 		CreditsDataHandler.CREDITS_DATA.entries.unshift( // and this is on da top
 			{
-				header: "Friday Night Funkin': Vs Dab (2025)",
+				header: "Friday Night Funkin': Vs Dab [2025]",
 				body: [
 					{
 						line: ""

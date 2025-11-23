@@ -1,42 +1,34 @@
 {
   "version": "1.0.0",
-  "name": "Teto (PLACEHOLDER)",
-  "assetPath": "characters/teto",
+  "name": "Teto (SPOOKY RAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH)",
+  "assetPath": "characters/extras/tetoscary",
   "singTime": 8.0,
-  "scale": 1.5,
-  "flipX": true,
-  "offsets": [-130, 0],
-  "healthIcon": {
-      "id": "teto",
-      "isPixel": false,
-      "flipX": false,
-      "scale": 1
-  },
+  "scale": 1,
   "animations": [
     {
       "name": "idle",
-      "prefix": "idle",
+      "prefix": "teto IDLE",
       "offsets": [0, 0]
     },
     {
       "name": "singLEFT",
-      "prefix": "left0",
+      "prefix": "teto LEFT0",
       "offsets": [0, 0]
     },
     {
       "name": "singDOWN",
-      "prefix": "down0",
-      "offsets": [0, 0]
+      "prefix": "teto DOWN",
+      "offsets": [-10, -130]
     },
     {
       "name": "singUP",
-      "prefix": "up0",
-      "offsets": [0, 0]
+      "prefix": "teto UP",
+      "offsets": [0, 30]
     },
     {
       "name": "singRIGHT",
-      "prefix": "right0",
-      "offsets": [0, 0]
+      "prefix": "teto RIGHT",
+      "offsets": [-50, 0]
     }
   ]
 }

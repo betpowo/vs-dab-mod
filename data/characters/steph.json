@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Steph",
-  "assetPath": "characters/steph",
+  "assetPath": "characters/extras/steph",
   "singTime": 8.0,
   "scale": 1.5,
   "offsets": [0, -5],
