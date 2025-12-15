@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="VOLTAGEArrow.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="DOWN Arrows instance 10000" x="0" y="0" width="141" height="125" frameX="-2" frameY="0" frameWidth="143" frameHeight="127"/>
+	<SubTexture name="DOWN Arrows instance 10001" x="0" y="0" width="141" height="125" frameX="-2" frameY="0" frameWidth="143" frameHeight="127"/>
+	<SubTexture name="DOWN Arrows instance 10002" x="141" y="0" width="142" height="127" frameX="0" frameY="0" frameWidth="143" frameHeight="127"/>
+	<SubTexture name="DOWN Arrows instance 10003" x="141" y="0" width="142" height="127" frameX="0" frameY="0" frameWidth="143" frameHeight="127"/>
+	<SubTexture name="DOWN Arrows instance 10004" x="283" y="0" width="142" height="125" frameX="-1" frameY="0" frameWidth="143" frameHeight="127"/>
+	<SubTexture name="DOWN Arrows instance 10005" x="283" y="0" width="142" height="125" frameX="-1" frameY="0" frameWidth="143" frameHeight="127"/>
+	<SubTexture name="LEFT Arrows instance 10000" x="425" y="0" width="125" height="141" frameX="0" frameY="-2" frameWidth="127" frameHeight="143"/>
+	<SubTexture name="LEFT Arrows instance 10001" x="425" y="0" width="125" height="141" frameX="0" frameY="-2" frameWidth="127" frameHeight="143"/>
+	<SubTexture name="LEFT Arrows instance 10002" x="550" y="0" width="127" height="142" frameX="0" frameY="0" frameWidth="127" frameHeight="143"/>
+	<SubTexture name="LEFT Arrows instance 10003" x="550" y="0" width="127" height="142" frameX="0" frameY="0" frameWidth="127" frameHeight="143"/>
+	<SubTexture name="LEFT Arrows instance 10004" x="677" y="0" width="125" height="141" frameX="0" frameY="-2" frameWidth="127" frameHeight="143"/>
+	<SubTexture name="LEFT Arrows instance 10005" x="677" y="0" width="125" height="141" frameX="0" frameY="-2" frameWidth="127" frameHeight="143"/>
+	<SubTexture name="RIGHT Arrows instance 10000" x="802" y="0" width="125" height="140" frameX="0" frameY="-2" frameWidth="127" frameHeight="143"/>
+	<SubTexture name="RIGHT Arrows instance 10001" x="802" y="0" width="125" height="140" frameX="0" frameY="-2" frameWidth="127" frameHeight="143"/>
+	<SubTexture name="RIGHT Arrows instance 10002" x="0" y="142" width="127" height="141" frameX="0" frameY="0" frameWidth="127" frameHeight="143"/>
+	<SubTexture name="RIGHT Arrows instance 10003" x="0" y="142" width="127" height="141" frameX="0" frameY="0" frameWidth="127" frameHeight="143"/>
+	<SubTexture name="RIGHT Arrows instance 10004" x="127" y="142" width="125" height="141" frameX="0" frameY="-2" frameWidth="127" frameHeight="143"/>
+	<SubTexture name="RIGHT Arrows instance 10005" x="127" y="142" width="125" height="141" frameX="0" frameY="-2" frameWidth="127" frameHeight="143"/>
+	<SubTexture name="UP Arrows instance 10000" x="252" y="142" width="141" height="125" frameX="0" frameY="-3" frameWidth="143" frameHeight="128"/>
+	<SubTexture name="UP Arrows instance 10001" x="252" y="142" width="141" height="125" frameX="0" frameY="-3" frameWidth="143" frameHeight="128"/>
+	<SubTexture name="UP Arrows instance 10002" x="393" y="142" width="142" height="128" frameX="-1" frameY="0" frameWidth="143" frameHeight="128"/>
+	<SubTexture name="UP Arrows instance 10003" x="393" y="142" width="142" height="128" frameX="-1" frameY="0" frameWidth="143" frameHeight="128"/>
+	<SubTexture name="UP Arrows instance 10004" x="535" y="142" width="142" height="125" frameX="0" frameY="-3" frameWidth="143" frameHeight="128"/>
+	<SubTexture name="UP Arrows instance 10005" x="535" y="142" width="142" height="125" frameX="0" frameY="-3" frameWidth="143" frameHeight="128"/>
+</TextureAtlas>

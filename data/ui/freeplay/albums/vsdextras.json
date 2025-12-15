@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "name": "Vs Dab OST",
+  "artists": ["CherryChi", "Betopia"],
+  "albumArtAsset": "freeplay/albumRoll/vsdextras",
+  "albumTitleAsset": "freeplay/albumRoll/vsdab-text"
+}
