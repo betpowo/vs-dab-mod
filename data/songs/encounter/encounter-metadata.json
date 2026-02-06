@@ -1,19 +1,55 @@
 {
-  "version": "2.2.4",
-  "songName": "Encounter",
-  "artist": "_chidotnb",
-  "charter": "Twizinho x Zyflx",
-  "timeFormat": "ms",
-  "timeChanges": [{ "t": 0, "bpm": 100, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
-  "playData": {
-    "album": "vsdab1",
-    "songVariations": [""],
-    "difficulties": ["hard"],
-    "ratings": { "hard": 3 },
-    "characters": { "player": "bf-christmas", "girlfriend": "gf-christmas", "opponent": "dab" },
-    "stage": "forest",
-    "stickerPack": "dab-stickers",
-    "noteStyle": "funkin"
+ "version": "2.2.4",
+ "songName": "Encounter",
+ "artist": "_chidotnb",
+ "charter": "Twizinho x Zyflx",
+ "divisions": 96,
+ "looped": false,
+ "offsets": {
+  "instrumental": 0,
+  "altInstrumentals": {  },
+  "vocals": {  },
+  "altVocals": {  }
+ },
+ "playData": {
+  "songVariations": [
+   ""
+  ],
+  "difficulties": [
+   "hard"
+  ],
+  "characters": {
+   "player": "bf-christmas",
+   "girlfriend": "gf-christmas",
+   "opponent": "dab",
+   "instrumental": "",
+   "altInstrumentals": [],
+   "opponentVocals": [
+    "dab"
+   ],
+   "playerVocals": [
+    "bf-christmas"
+   ]
   },
-  "generatedBy": "MasterEric (by hand)"
+  "stage": "forest",
+  "noteStyle": "funkin",
+  "ratings": {
+   "hard": 3
+  },
+  "album": "vsdab1",
+  "previewStart": 0,
+  "previewEnd": 15000
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.1",
+ "timeFormat": "ms",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 100,
+   "n": 4,
+   "d": 4,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
 }

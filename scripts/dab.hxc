@@ -1,0 +1,24 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+
+class ParentsChristmasCharacter extends MultiSparrowCharacter
+{
+  function new()
+  {
+    super('dab');
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    // Override the hit note animation.
+    switch (event.note.kind)
+    {
+      case "alt":
+        holdTimer = 0;
+        this.playSingAnimation(event.note.noteData.getDirection(), false, '-alt');
+        return;
+    }
+    super.onNoteHit(event);
+  }
+}

@@ -1,40 +1,65 @@
 {
   "version": "1.0.0",
-  "name": "Dab",
   "assetPath": "characters/dab",
-  "singTime": 8.0,
   "animations": [
     {
       "name": "idle",
       "prefix": "idle",
-      "offsets": [0, 0]
+      "offsets": [0, -100]
     },
     {
       "name": "singLEFT",
-      "prefix": "left",
-      "offsets": [40, 5]
+      "prefix": "left0",
+      "offsets": [200, -110]
     },
     {
       "name": "singDOWN",
-      "prefix": "down",
-      "offsets": [-60, -10]
+      "prefix": "down0",
+      "offsets": [70, -300]
     },
     {
       "name": "singDOWN-hold",
-      "prefix": "down",
+      "prefix": "down0",
       "looped": true,
       "frameIndices": [2, 3, 4, 5],
-      "offsets": [-60, -10]
+      "offsets": [70, -300]
     },
     {
       "name": "singUP",
-      "prefix": "up",
-      "offsets": [10, -10]
+      "prefix": "up0",
+      "offsets": [10, -60]
     },
     {
       "name": "singRIGHT",
-      "prefix": "right",
-      "offsets": [-20, 0]
+      "prefix": "right0",
+      "offsets": [-50, -120]
+    },
+    {
+      "name": "singLEFT-alt",
+      "assetPath": "characters/dab-alt",
+      "prefix": "left-alt",
+      "offsets": [60, -90]
+    },
+    {
+      "name": "singDOWN-alt",
+      "assetPath": "characters/dab-alt",
+      "prefix": "down-alt",
+      "offsets": [20, -170]
+    },
+    {
+      "name": "singUP-alt",
+      "assetPath": "characters/dab-alt",
+      "prefix": "up-alt",
+      "offsets": [60, 90]
+    },
+    {
+      "name": "singRIGHT-alt",
+      "assetPath": "characters/dab-alt",
+      "prefix": "right-alt",
+      "offsets": [-10, -105]
     }
-  ]
+  ],
+  "name": "Dab",
+  "renderType": "multisparrow",
+  "singTime": 8.0
 }

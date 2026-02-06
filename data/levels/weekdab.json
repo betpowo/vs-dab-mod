@@ -5,8 +5,8 @@
   "props": [
     {
       "assetPath": "storymenu/props/dab",
-      "scale": 0.5,
-      "offsets": [20, -170],
+      "scale": 1.0,
+      "offsets": [160, 70],
       "animations": [
         {
           "name": "idle",
