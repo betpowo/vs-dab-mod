@@ -10,7 +10,7 @@
     {
       "name": "singLEFT",
       "prefix": "left0",
-      "offsets": [200, -110]
+      "offsets": [220, -110]
     },
     {
       "name": "singDOWN",
@@ -27,7 +27,7 @@
     {
       "name": "singUP",
       "prefix": "up0",
-      "offsets": [10, -60]
+      "offsets": [0, -70]
     },
     {
       "name": "singRIGHT",

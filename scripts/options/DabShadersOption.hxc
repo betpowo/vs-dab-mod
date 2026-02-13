@@ -1,0 +1,33 @@
+import funkin.modding.module.Module;
+import funkin.modding.events.ScriptEvent;
+import funkin.util.ReflectUtil;
+import flixel.FlxG;
+import funkin.save.Save;
+import funkin.ui.options.OptionsState;
+
+class DabShadersOption extends Module {
+	public function new() {
+		super('DabShadersOption');
+	}
+
+	function onCreate(event:ScriptEvent):Void {
+		super.onCreate(event);
+
+		if (FlxG.save.data.dabShaders != false && FlxG.save.data.dabShaders != true)
+			FlxG.save.data.dabShaders = false;
+	}
+
+	public function onStateChangeEnd(event:StateChangeScriptEvent) {
+		if (Std.isOfType(event.targetState, OptionsState)) {
+			if (event.targetState.optionsCodex.pages.get("preferences") != null) {
+				event.targetState.optionsCodex.pages.get("preferences")
+					.createPrefItemCheckbox('Disable VFX',
+						"If enabled, removes extra details like shaders to run better on low-end devices.",
+						function(value:Bool):Void {
+							FlxG.save.data.dabShaders = value;
+							FlxG.save.data.flush;
+						}, FlxG.save.data.dabShaders);
+			}
+		}
+	}
+}

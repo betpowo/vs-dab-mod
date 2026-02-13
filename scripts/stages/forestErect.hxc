@@ -22,11 +22,11 @@ class ForestErectStage extends Stage
     colorShader = new AdjustColorShader();
 
     clouds = new FlxTiledSprite(Paths.image('stages/snowy/erect/clouds'), 3200, 235, true, false);
-    clouds.setPosition(-1100, 20);
-    clouds.scrollFactor.set(0.25, 0.25);
+    clouds.setPosition(-1100, -150);
+    clouds.scrollFactor.set(0.9, 0.9);
     clouds.zIndex = 12;
 
-    clouds.velocity.x = 8;
+    clouds.velocity.x = 20;
 
     PlayState.instance.currentStage.add(clouds);
     PlayState.instance.currentStage.refresh(); // Apply z-index.
@@ -36,11 +36,12 @@ class ForestErectStage extends Stage
   override function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
-
-    colorShader.hue = 10;
-    colorShader.saturation = 10;
-    colorShader.contrast = 10;
-    colorShader.brightness = -10;
+    if (FlxG.save.data.dabShaders != true) {
+      colorShader.hue = 10;
+      colorShader.saturation = 10;
+      colorShader.contrast = 10;
+      colorShader.brightness = -10;
+    }
   }
 
   /**

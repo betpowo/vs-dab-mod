@@ -22,11 +22,12 @@ class ForestStage extends Stage
   override function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
-
-    colorShader.hue = 0;
-    colorShader.saturation = -15;
-    colorShader.contrast = 0;
-    colorShader.brightness = 5;
+    if (FlxG.save.data.dabShaders != true) {
+      colorShader.hue = 0;
+      colorShader.saturation = -15;
+      colorShader.contrast = 0;
+      colorShader.brightness = 5;
+    }
   }
 
   override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
