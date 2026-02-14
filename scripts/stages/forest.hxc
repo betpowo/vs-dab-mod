@@ -1,8 +1,10 @@
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.group.FlxTypedSpriteGroup;
 import funkin.play.stage.Stage;
 import funkin.play.PlayState;
 import funkin.graphics.shaders.AdjustColorShader;
+import funkin.Conductor;
 
 class ForestStage extends Stage
 {
@@ -12,11 +14,36 @@ class ForestStage extends Stage
   }
   
   var colorShader:AdjustColorShader;
+  var particles:FlxTypedSpriteGroup;
   
   function buildStage()
   {
     super.buildStage();
     colorShader = new AdjustColorShader();
+    particles = new FlxTypedSpriteGroup();
+    particles.zIndex = 99999;
+    for (i in 0...300) {
+      var speck = new FlxSprite();
+      speck.loadGraphic(Paths.image('stages/snowy/a measly speck of snow'));
+      resetSpeck(speck);
+      speck.zIndex = 99999;
+      particles.add(speck);
+    }
+    PlayState.instance.currentStage.add(particles);
+  }
+
+  function resetSpeck(speck:FlxSprite) {
+      speck.scale.x = speck.scale.y = FlxG.random.float(0.2, 1.5);
+      speck.alpha = speck.scale.x;
+      speck.blend = 0;
+      speck.scrollFactor.set((speck.scale.x * 0.9) + 0.1, 0);
+      speck.updateHitbox();
+      speck.moves = true;
+      speck.velocity.y = FlxG.random.float(150, 250);
+      speck.velocity.x = FlxG.random.float(-20, 100);
+
+      var padding = 700;
+      speck.setPosition(FlxG.random.int(-padding, FlxG.width + padding), FlxG.random.int(-200, FlxG.height + 200));
   }
 
   override function onCreate(event:ScriptEvent)
@@ -28,6 +55,18 @@ class ForestStage extends Stage
       colorShader.contrast = 0;
       colorShader.brightness = 5;
     }
+  }
+
+  override function onUpdate(event:ScriptEvent) {
+    super.onUpdate(event);
+    var con = Conductor.instance;
+    particles.forEachAlive((speck) -> {
+      if (speck.y >= FlxG.height + 300) {
+        resetSpeck(speck);
+        speck.y = PlayState.instance.camGame.viewMarginTop - 50;
+      }
+      speck.velocity.x += Math.sin(con.currentBeatTime * Math.PI * 0.5) * 3;
+    });
   }
 
   override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
