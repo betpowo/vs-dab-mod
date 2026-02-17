@@ -22,8 +22,6 @@ class ForestErectStage extends Stage
   {
     super.buildStage();
 
-    colorShader = new AdjustColorShader();
-
     clouds = new FlxTiledSprite(Paths.image('stages/snowy/erect/clouds'), 3200, 235, true, false);
     clouds.setPosition(-1100, -150);
     clouds.scrollFactor.set(0.9, 0.9);
@@ -31,19 +29,22 @@ class ForestErectStage extends Stage
 
     clouds.velocity.x = 20;
 
-    particles = new FlxTypedSpriteGroup();
-    particles.zIndex = 99999;
-    for (i in 0...300) {
-      var speck = new FlxSprite();
-      speck.loadGraphic(Paths.image('stages/snowy/a measly speck of snow'));
-      resetSpeck(speck);
-      speck.zIndex = 99999;
-      particles.add(speck);
-    }
-    PlayState.instance.currentStage.add(particles);
+    if (FlxG.save.data.dabShaders != true) {
+      colorShader = new AdjustColorShader();
+      particles = new FlxTypedSpriteGroup();
+      particles.zIndex = 99999;
+      for (i in 0...300) {
+        var speck = new FlxSprite();
+        speck.loadGraphic(Paths.image('stages/snowy/a measly speck of snow'));
+        resetSpeck(speck);
+        speck.zIndex = 99999;
+        particles.add(speck);
+      }
+      PlayState.instance.currentStage.add(particles);
 
-    PlayState.instance.currentStage.add(clouds);
-    PlayState.instance.currentStage.refresh(); // Apply z-index.
+      PlayState.instance.currentStage.add(clouds);
+      PlayState.instance.currentStage.refresh(); // Apply z-index.
+    }
 
   }
 
@@ -73,14 +74,16 @@ class ForestErectStage extends Stage
 
   override function onUpdate(event:ScriptEvent) {
     super.onUpdate(event);
-    var con = Conductor.instance;
-    particles.forEachAlive((speck) -> {
-      if (speck.y >= FlxG.height + 300) {
-        resetSpeck(speck);
-        speck.y = PlayState.instance.camGame.viewMarginTop - 50;
-      }
-      speck.velocity.x += Math.sin(con.currentBeatTime * Math.PI * 0.5) * 7;
-    });
+    if (particles != null && FlxG.save.data.dabShaders != true) {
+      var con = Conductor.instance;
+      particles.forEachAlive((speck) -> {
+        if (speck.y >= FlxG.height + 300) {
+          resetSpeck(speck);
+          speck.y = PlayState.instance.camGame.viewMarginTop - 50;
+        }
+        speck.velocity.x += Math.sin(con.currentBeatTime * Math.PI * 0.5) * 7;
+      });
+    }
   }
   /**
    * Apply the shader to the character as it is added.
@@ -90,6 +93,8 @@ class ForestErectStage extends Stage
     // Apply the shader automatically to each character as it gets added.
     super.addCharacter(character, charType);
     trace('Applied stage shader to ' + character.characterName);
-    character.shader = colorShader;
+    if (FlxG.save.data.dabShaders != true) {
+      character.shader = colorShader;
+    }
   }
 }

@@ -19,17 +19,19 @@ class ForestStage extends Stage
   function buildStage()
   {
     super.buildStage();
-    colorShader = new AdjustColorShader();
-    particles = new FlxTypedSpriteGroup();
-    particles.zIndex = 99999;
-    for (i in 0...300) {
-      var speck = new FlxSprite();
-      speck.loadGraphic(Paths.image('stages/snowy/a measly speck of snow'));
-      resetSpeck(speck);
-      speck.zIndex = 99999;
-      particles.add(speck);
+    if (FlxG.save.data.dabShaders != true) {
+      colorShader = new AdjustColorShader();
+      particles = new FlxTypedSpriteGroup();
+      particles.zIndex = 99999;
+      for (i in 0...300) {
+        var speck = new FlxSprite();
+        speck.loadGraphic(Paths.image('stages/snowy/a measly speck of snow'));
+        resetSpeck(speck);
+        speck.zIndex = 99999;
+        particles.add(speck);
+      }
+      PlayState.instance.currentStage.add(particles);
     }
-    PlayState.instance.currentStage.add(particles);
   }
 
   function resetSpeck(speck:FlxSprite) {
@@ -59,14 +61,16 @@ class ForestStage extends Stage
 
   override function onUpdate(event:ScriptEvent) {
     super.onUpdate(event);
-    var con = Conductor.instance;
-    particles.forEachAlive((speck) -> {
-      if (speck.y >= FlxG.height + 300) {
-        resetSpeck(speck);
-        speck.y = PlayState.instance.camGame.viewMarginTop - 50;
-      }
-      speck.velocity.x += Math.sin(con.currentBeatTime * Math.PI * 0.5) * 3;
-    });
+    if (particles != null && FlxG.save.data.dabShaders != true) {
+      var con = Conductor.instance;
+      particles.forEachAlive((speck) -> {
+        if (speck.y >= FlxG.height + 300) {
+          resetSpeck(speck);
+          speck.y = PlayState.instance.camGame.viewMarginTop - 50;
+        }
+        speck.velocity.x += Math.sin(con.currentBeatTime * Math.PI * 0.5) * 3;
+      });
+    }
   }
 
   override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
@@ -74,6 +78,8 @@ class ForestStage extends Stage
     // Apply the shader automatically to each character as it gets added.
     super.addCharacter(character, charType);
     trace('Applied stage shader to ' + character.characterName);
-    character.shader = colorShader;
+    if (FlxG.save.data.dabShaders != true) {
+      character.shader = colorShader;
+    }
   }
 }
